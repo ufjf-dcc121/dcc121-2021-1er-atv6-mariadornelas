@@ -507,11 +507,17 @@
         const celulas = document.querySelectorAll("td");
 
         for(let c = 0; c < celulas.length-1; c++){
-            const element = celulas[c];
+            let element = celulas[c];
 
             if(element.classList.contains('')){
                 element.classList.add('parede');
             }
+        }
+
+        document.addEventListener('click', eClique, false);
+
+        function eClique(event) {
+            console.log("Classe: ", event.target.classList.value);
         }
 
     </script>
