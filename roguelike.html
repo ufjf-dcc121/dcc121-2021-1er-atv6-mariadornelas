@@ -509,7 +509,9 @@
         for(let c = 0; c < celulas.length-1; c++){
             const element = celulas[c];
 
-            element.classList.toggle('parede');
+            if(element.classList.contains('')){
+                element.classList.add('parede');
+            }
         }
 
     </script>
