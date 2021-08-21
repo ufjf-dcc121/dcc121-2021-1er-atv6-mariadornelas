@@ -1,525 +1,542 @@
 <!DOCTYPE html>
 <html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Roguelike</title>
     <style>
-            th {
-                height: 30px;
-                width: 30px;
-                background-color: brown;
-            }
-            td {
-                width: 30px;
-                height: 30px;
-                background-color: brown;
-            }
-            #h {
-                color:dodgerblue;
-            }
-            .orcs {
-                color:limegreen;
-            }
-            .machado {
-                color:gold;
-                border-style: solid;
-                border-color: black;
-            }
-            .arco{
-                color:gold;
-            }
-            .parece {
-                font-size: 0px;
-                background-color: gray;
-            }
+      th {
+        height: 30px;
+        width: 30px;
+        background-color: brown;
+      }
+      td {
+        width: 30px;
+        height: 30px;
+        background-color: brown;
+      }
+      #h {
+        color: dodgerblue;
+      }
+      .orcs {
+        color: limegreen;
+      }
+      .machado {
+        color: gold;
+        border-style: solid;
+        border-color: black;
+      }
+      .arco {
+        color: gold;
+      }
+      .parede {
+        font-size: 0px;
+        background-color: gray;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <table>
-        <thead>
-            <tr>
-                <th class="parece"></th>
-                <th class="parece"></th>
-                <th class="parece"></th>
-                <th class="parece"></th>
-                <th class="parece"></th>
-                <th class="parece"></th>
-                <th class="parece"></th>
-                <th class="parece"></th>
-                <th class="parece"></th>
-                <th class="parece"></th>
-                <th class="parece"></th>
-                <th class="parece"></th>
-                <th class="parece"></th>
-                <th class="parece"></th>
-                <th class="parece"></th>
-                <th class="parece"></th>
-                <th class="parece"></th>
-                <th class="parece"></th>
-                <th class="parece"></th>
-                <th class="parece"></th>
-            </tr>
-        </thead>
+      <thead>
+        <tr>
+          <th class="parede"></th>
+          <th class="parede"></th>
+          <th class="parede"></th>
+          <th class="parede"></th>
+          <th class="parede"></th>
+          <th class="parede"></th>
+          <th class="parede"></th>
+          <th class="parede"></th>
+          <th class="parede"></th>
+          <th class="parede"></th>
+          <th class="parede"></th>
+          <th class="parede"></th>
+          <th class="parede"></th>
+          <th class="parede"></th>
+          <th class="parede"></th>
+          <th class="parede"></th>
+          <th class="parede"></th>
+          <th class="parede"></th>
+          <th class="parede"></th>
+          <th class="parede"></th>
+        </tr>
+      </thead>
 
-        <tbody>
-            <tr>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-            </tr>
+      <tbody>
+        <tr>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+        </tr>
 
-            <tr>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-            </tr>
+        <tr>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+        </tr>
 
-            <tr>
-                <td id="h">@</td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-            </tr>
+        <tr>
+          <td id="h">@</td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+        </tr>
 
-            <tr>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-            </tr>
+        <tr>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+        </tr>
 
-            <tr>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="orcs">O</td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="machado">T</td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="orcs">O</td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-            </tr>
+        <tr>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="orcs">O</td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="machado">T</td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="orcs">O</td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+        </tr>
 
-            <tr>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-            </tr>
+        <tr>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+        </tr>
 
-            <tr>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-            </tr>
+        <tr>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+        </tr>
 
-            <tr>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-            </tr>
+        <tr>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+        </tr>
 
-            <tr>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-            </tr>
+        <tr>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+        </tr>
 
-            <tr>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="orcs">O</td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-            </tr>
+        <tr>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="orcs">O</td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+        </tr>
 
-            <tr>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-            </tr>
+        <tr>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+        </tr>
 
-            <tr>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-            </tr>
+        <tr>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+        </tr>
 
-            <tr>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-            </tr>
+        <tr>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+        </tr>
 
-            <tr>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-            </tr>
+        <tr>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+        </tr>
 
-            <tr>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="orcs">O</td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="arco">D</td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="orcs">O</td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-            </tr>
+        <tr>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="orcs">O</td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="arco">D</td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="orcs">O</td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+        </tr>
 
-            <tr>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-            </tr>
+        <tr>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+        </tr>
 
-            <tr>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-            </tr>
+        <tr>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+        </tr>
 
-            <tr>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-            </tr>
+        <tr>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+        </tr>
 
-            <tr>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-                <td class="parece"></td>
-            </tr>
-        </tbody>
+        <tr>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+          <td class="parede"></td>
+        </tr>
+      </tbody>
     </table>
-    
+
     <script>
-        const celulas = document.querySelectorAll("td");
+      const celulas = document.querySelectorAll("td");
 
-        for(let c = 0; c < celulas.length-1; c++){
-            let element = celulas[c];
+      for (let c = 0; c < celulas.length; c++) {
+        let element = celulas[c];
 
-            if(element.classList.contains('')){
-                element.classList.add('parede');
-            }
+        if (element.classList.length === 0) {
+          element.classList.add("parede");
         }
+        element.addEventListener("click", eClique, false);
+      }
 
-        document.addEventListener('click', eClique, false);
+      function eClique(event) {
+        let target = event.target;
 
-        function eClique(event) {
-            console.log("Classe: ", event.target.classList.value);
+        if (target.classList.length === 0) {
+          target.classList.add("orcs");
+          target.textContent = "O";
+        } else if (target.classList.contains("orcs")) {
+          target.classList.remove("orcs");
+          target.classList.add("arco");
+          target.textContent = "D";
+        } else if (target.classList.contains("arco")) {
+          target.classList.remove("arco");
+          target.classList.add("machado");
+          target.textContent = "T";
+        } else if (target.classList.contains("machado")) {
+          target.classList.remove("machado");
+          target.classList.add("parede");
+        } else if (target.classList.contains("parede")) {
+          target.classList.remove("parede");
         }
-
+        
+      }
     </script>
-</body>
+  </body>
 </html>
